@@ -1,0 +1,30 @@
+#How many numbers we want to display
+def main():
+    num = input("How many Fibonacci numbers do you want?: ")
+    try:
+        num = int(num)
+    except:
+        print(f'\n{num} is an invalid input.')
+    fib (num)
+
+
+#Number of Fib that will be display
+def fib(nParameter):
+    n1 = 0
+    n2 = 1
+    count = 0 
+    try:
+        nParameter = int(nParameter)
+        print(f'\nFibonacci sequence of {nParameter}:')
+        while count < nParameter:
+            print(n1)
+            nth = n1 + n2
+            n1 = n2
+            n2 = nth
+            count += 1
+    except:
+        print(f'Try again!\n')
+
+main()
+
+#This Code also checks if the input is an int or string
