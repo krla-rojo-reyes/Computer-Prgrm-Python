@@ -1,0 +1,21 @@
+import datetime 
+from datetime import datetime
+
+#Getting today date
+today = datetime.now()
+print(f"Today is: {today.day} of the month. ")
+
+#Getting user's favorite day
+favDay = input('What is your favorite day of the month?')
+
+#Transforming value 
+today = int(today.day)
+favDay = int(favDay)
+
+#Checking if FavDay meets the conditions
+if favDay == today :
+    print(f'Today is your favorite day!')
+elif favDay > today :
+    print(f'Your favorite day is in {favDay - today} day(s).')
+else:
+    print(f'Your favorite day was {today - favDay} day(s) ago.')
