@@ -1,0 +1,24 @@
+nRows = 10
+nColumns = 20
+
+# 10 Lines, 20 asteriks
+for i in range (nRows):
+    for j in range (nColumns):
+        print ('*', end ='')
+    print ()
+
+nArrow = 9
+
+#Upper Arrow Row
+for i in range (nArrow):
+    for j in range (2*i-1):
+        print ('*', end ='')
+    print ()
+
+nArrow2 = 9
+
+#Lower Arrow Row
+for i in range(nArrow2, 0, -1):
+    for j in range (2*i-1):
+       print('*', end='')
+    print()
