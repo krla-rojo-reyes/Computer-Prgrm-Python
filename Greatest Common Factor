@@ -1,0 +1,28 @@
+def main():
+    print(f'Finding Greatest Common Factor\n')
+    num1 = IntValidation(input('Enter first number: '))
+    num2 = IntValidation(input("Enter the second number: "))
+
+    gcf = CalculateGCF(int(num1), int(num2))
+
+    print(f"\nThe gcf of {num1} and {num2} is: {gcf}!")
+
+def CalculateGCF(num1, num2):
+    temp = num1 if num1 < num2 else num2
+    for i in range(temp, 0, -1):
+        if (num1 % i == 0 and num2 % i == 0):
+            return i
+
+def IntValidation(value):
+    while (True):
+        if value.isnumeric():
+            return value
+        elif "." in value:
+            print("Input a whole Positive number: ")
+        elif value[0] == "-":
+            print("Input a whole positive number: ")
+        elif not value.isnumeric():
+            print("Input a whole positive number: ")
+        value = input()
+
+main()
